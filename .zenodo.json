@@ -1,0 +1,56 @@
+{
+  "title": "Code and data for: Choosing an operational inference pipeline for internal solitary wave detection in Sentinel-1 SAR imagery: EVA02+XGBoost versus a Julia Lux CNN (GMD, 2026)",
+  "description": "Benchmark scripts, output data, and trained model weights accompanying the Geoscientific Model Development submission. Compares Pipeline A (Python EVA02-Large + XGBoost, 305M parameters) with Pipeline B (Julia Lux CNN SAR_CNN v2, 283,329 parameters) for operational internal solitary wave detection in Sentinel-1 SAR imagery.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Pinelo, João",
+      "affiliation": "Atlantic International Research Centre (AIR Centre), Azores, Portugal",
+      "orcid": "0000-0002-4890-0775"
+    },
+    {
+      "name": "Shukla, Arun",
+      "affiliation": "Atlantic International Research Centre (AIR Centre), Azores, Portugal",
+      "orcid": "0009-0001-5812-1660"
+    },
+    {
+      "name": "Titericz, Gilberto",
+      "affiliation": "NVIDIA Inc., Curitiba, Brazil",
+      "orcid": "0009-0001-4093-9544"
+    },
+    {
+      "name": "Santos-Ferreira, Adriana",
+      "affiliation": "Atlantic International Research Centre (AIR Centre), Azores, Portugal",
+      "orcid": "0000-0002-5704-6021"
+    },
+    {
+      "name": "Gonçalves, João",
+      "affiliation": "Atlantic International Research Centre (AIR Centre), Azores, Portugal",
+      "orcid": "0009-0001-4547-1696"
+    },
+    {
+      "name": "Moniz, João",
+      "affiliation": "Atlantic International Research Centre (AIR Centre), Azores, Portugal"
+    }
+  ],
+  "keywords": [
+    "internal solitary waves",
+    "synthetic aperture radar",
+    "Sentinel-1",
+    "machine learning",
+    "inference benchmarking",
+    "operational oceanography",
+    "EVA02",
+    "XGBoost",
+    "Julia",
+    "Lux.jl"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/aircentre/iws-pipeline-comparison-gmd",
+      "scheme": "url"
+    }
+  ]
+}
