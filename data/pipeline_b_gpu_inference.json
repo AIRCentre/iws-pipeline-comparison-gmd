@@ -1,0 +1,177 @@
+{
+  "inference_power": {
+    "net_w": 82.41487705347214,
+    "gross_mean_w": 152.95770833333333,
+    "gross_std_w": 7.958244483942653,
+    "distribution": {
+      "std_w": 7.958244483942653,
+      "mean_w": 152.95770833333333,
+      "p50_w": 157.5066666666667,
+      "min_w": 142.10250000000002,
+      "p75_w": 160.085,
+      "peak_mean_w": 224.71000000000004,
+      "p95_mean_w": 221.58379999999997,
+      "p25_w": 152.13666666666666,
+      "max_w": 187.9245454545454,
+      "any_throttling": false
+    },
+    "per_run_breakdown": [
+      {
+        "net_w": 64.56630129589641,
+        "mean_w": 142.10250000000002,
+        "run": 1,
+        "peak_w": 212.9,
+        "energy_j": 253.46765177428725,
+        "p95_w": 210.9805,
+        "mean_temp_c": 38.166666666666664,
+        "wall_time_s": 1.783695936203003,
+        "throttled": false
+      },
+      {
+        "net_w": 110.3883467504418,
+        "mean_w": 187.9245454545454,
+        "run": 2,
+        "peak_w": 223.54,
+        "energy_j": 308.2353439606319,
+        "p95_w": 219.3655,
+        "mean_temp_c": 38.666666666666664,
+        "wall_time_s": 1.6402080059051514,
+        "throttled": false
+      },
+      {
+        "net_w": 82.5488012958964,
+        "mean_w": 160.085,
+        "run": 3,
+        "peak_w": 237.8,
+        "energy_j": 263.41039317011837,
+        "p95_w": 233.6035,
+        "mean_temp_c": 38.666666666666664,
+        "wall_time_s": 1.6454408168792725,
+        "throttled": false
+      },
+      {
+        "net_w": 74.60046796256304,
+        "mean_w": 152.13666666666666,
+        "run": 4,
+        "peak_w": 222.44,
+        "energy_j": 250.5963054728508,
+        "p95_w": 221.252,
+        "mean_temp_c": 38.916666666666664,
+        "wall_time_s": 1.6471788883209229,
+        "throttled": false
+      },
+      {
+        "net_w": 79.97046796256308,
+        "mean_w": 157.5066666666667,
+        "run": 5,
+        "peak_w": 226.87,
+        "energy_j": 261.27883782704674,
+        "p95_w": 222.71749999999997,
+        "mean_temp_c": 39.083333333333336,
+        "wall_time_s": 1.6588430404663086,
+        "throttled": false
+      }
+    ]
+  },
+  "publishable_summary": {
+    "energy_per_image_mj_net": 23.558,
+    "energy_per_image_mj_gross": 43.723,
+    "clocks_locked": false,
+    "std_energy_per_image_mj": 4.0,
+    "net_inference_power_w": 82.41,
+    "idle_converged": true,
+    "report_format": "mean ± std (IQR-robust) across 5 runs",
+    "mean_gpu_power_w": 152.96,
+    "std_gpu_power_w": 7.96,
+    "thermal_throttling_detected": false
+  },
+  "timing_metrics": {
+    "model_load_time_ms": 2537.4491214752197,
+    "batch_p50_ms": 35.8964204788208,
+    "images_per_second": 3396.071058744879,
+    "std_batch_time_ms": 1.702598396466949,
+    "batch_p75_ms": 36.395251750946045,
+    "batch_p25_ms": 34.10768508911133,
+    "data_preload_time_s": 52.271151065826416,
+    "complete_pipeline_ms": 0.275395122235236,
+    "image_loading_throughput": 8282.043642128881,
+    "memory_per_image_mb": 0.25,
+    "single_image_latency_ms": 0.29445791407249894,
+    "total_batches": 230,
+    "peak_gpu_mb": 27838.75,
+    "processing_efficiency": 0.5277186341291731,
+    "image_loading_ms": 0.12074314543734427,
+    "avg_batch_time_ms": 35.25057564611021,
+    "cnn_throughput": 6466.1313790179265,
+    "peak_cpu_mb": 4211.97265625,
+    "batch_p90_ms": 36.55402660369873,
+    "total_inference_time_s": 8.627616882324219,
+    "pure_cnn_inference_ms": 0.15465197679789172
+  },
+  "metadata": {
+    "sampling_interval_ms": 100,
+    "clock_lock": {
+      "locked": false,
+      "note": "Clocks not locked; benchmarks ran under default boost to reflect production operating conditions."
+    },
+    "cooldown_between_runs_s": 15.0,
+    "notes": [
+      "Synchronous polling at 100 ms resolution",
+      "Intra-run statistics: IQR-robust (Tukey fences)",
+      "Cross-run statistics: mean ± std over 5 passes",
+      "Power measured during single full-dataset pass per run",
+      "Model load, data preload, warm-up excluded from measurement",
+      "CUDA.synchronize() called before stopping per-run timer",
+      "Net power = gross − idle baseline (IQR-robust idle mean)",
+      "Clock locking applied: false"
+    ],
+    "pipeline": "Julia_Lux_CNN_GPU",
+    "generated_at": "2026-03-15T11:15:10.235",
+    "measurement_tool": "nvidia-smi synchronous polling",
+    "n_profile_runs": 5
+  },
+  "idle_baseline": {
+    "convergence_note": "Converged (drift 0.12 W across 3 windows)",
+    "std_w": 0.286402184896465,
+    "mean_w": 77.53619870410361,
+    "mean_temp_c": 33.0,
+    "min_w": 77.06,
+    "duration_s": 60.0,
+    "n_samples_total": 505,
+    "converged": true,
+    "max_w": 78.18,
+    "n_samples_used": 463
+  },
+  "system": {
+    "gpu": {
+      "measurement_date": "2026-03-15T11:15:09.965",
+      "tdp_w": 300.0,
+      "cuda_functional": true,
+      "compute_mode": "Default",
+      "vram_total_mb": 46068.0,
+      "persistence_mode": "Disabled",
+      "gpu_name": "NVIDIA L40",
+      "memory_clock_mhz": 9001.0,
+      "nvidia_smi_path": "/usr/bin/nvidia-smi",
+      "driver_version": "590.48.01",
+      "graphics_clock_mhz": 2490.0,
+      "power_limit_w": 300.0
+    },
+    "batch_size": 128,
+    "n_images": 5860
+  },
+  "energy_metrics": {
+    "total_energy_j": 256.21537900267043,
+    "idle_baseline_w": 77.53619870410361,
+    "energy_per_image_j": 0.04372276092195741,
+    "energy_per_image_mj": 43.72276092195741,
+    "std_inference_wall_s": 0.06110251511058317,
+    "net_w": 82.41487705347214,
+    "std_energy_j": 23.438138556260974,
+    "std_energy_per_image_mj": 3.9996823474848076,
+    "gross_mean_w": 152.95770833333333,
+    "gross_std_w": 7.958244483942653,
+    "net_energy_per_image_mj": 23.558184841320635,
+    "mean_inference_wall_s": 1.6750733375549316
+  }
+}

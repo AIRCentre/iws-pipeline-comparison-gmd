@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Julia
+Manifest.toml
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor
+*.swp
+*~
+.vscode/
+
+# Test artefacts
+server_test/

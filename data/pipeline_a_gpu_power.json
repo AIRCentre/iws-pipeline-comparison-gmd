@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "description": "GPU power profiling - EVA02 + XGBoost IWS pipeline",
+    "generated_at": "2026-03-16 19:30:40.196952",
+    "measurement_tool": "nvidia-smi synchronous polling",
+    "sampling_interval_ms": 100,
+    "idle_baseline_duration_s": 60.0,
+    "n_profile_runs": 5,
+    "cooldown_between_runs_s": 30.0,
+    "pipeline_cooldown_s": 300.0,
+    "warmup": "1 full pass through all 5860 test images before each pipeline (not measured)",
+    "n_test_images": 5860,
+    "batch_size": 128
+  },
+  "pipeline_2_eva02_xgboost": {
+    "metadata": {
+      "pipeline": "EVA02_XGBoost_combined_GPU",
+      "generated_at": "2026-03-16 19:30:40.196910",
+      "measurement_tool": "nvidia-smi synchronous polling",
+      "sampling_interval_ms": 100,
+      "n_profile_runs": 5,
+      "cooldown_between_runs_s": 30.0,
+      "pipeline_cooldown_s": 300.0,
+      "idle_baseline_duration_s": 60.0,
+      "thermal_threshold_c": 80.0,
+      "warmup_protocol": "1 full pass through all 5860 test images before each pipeline (not measured)",
+      "notes": [
+        "Full pipeline per run: load PNG -> resize 448x448 -> EVA-02 -> 1000-dim embedding -> XGBoost",
+        "Power measured during inference loop only - model load, preload, warm-up excluded",
+        "Net power = gross mean power - idle baseline mean power",
+        "gross_energy_per_image_mj = (mean_w x mean_wall_s / n_images) x 1000",
+        "net_energy_per_image_mj   = (net_w  x mean_wall_s / n_images) x 1000",
+        "Cross-run stats = mean +/- std across 5 valid runs"
+      ]
+    },
+    "system": {
+      "gpu": {
+        "measurement_date": "2026-03-16 19:30:40.066737",
+        "nvidia_smi_path": "/usr/bin/nvidia-smi",
+        "gpu_name": "NVIDIA L40",
+        "driver_version": "590.48.01",
+        "tdp_w": 300.0,
+        "vram_total_mb": 46068.0,
+        "graphics_clock_mhz": 1440.0,
+        "memory_clock_mhz": 9001.0,
+        "persistence_mode": "Disabled",
+        "clocks_locked": false
+      },
+      "n_images": 5860,
+      "batch_size": 128
+    },
+    "idle_baseline": {
+      "mean_w": 78.48,
+      "std_w": 0.269,
+      "min_w": 78.14,
+      "max_w": 79.26,
+      "mean_temp_c": 33.0,
+      "min_temp_c": 33.0,
+      "max_temp_c": 33.0,
+      "duration_s": 60.0,
+      "n_samples_total": 506,
+      "n_samples_used": 472,
+      "converged": true,
+      "convergence_note": "Converged (drift 0.13 W across 3 windows)"
+    },
+    "per_run_breakdown": [
+      {
+        "run": 1,
+        "mean_w": 300.555,
+        "peak_w": 346.46,
+        "p95_w": 330.819,
+        "net_w": 222.075,
+        "energy_j": 68869.382,
+        "wall_time_s": 229.141,
+        "mean_temp_c": 63.63,
+        "throttled": false,
+        "n_samples": 1916
+      },
+      {
+        "run": 2,
+        "mean_w": 301.18,
+        "peak_w": 349.54,
+        "p95_w": 333.77,
+        "net_w": 222.7,
+        "energy_j": 69027.236,
+        "wall_time_s": 229.189,
+        "mean_temp_c": 65.05,
+        "throttled": false,
+        "n_samples": 1918
+      },
+      {
+        "run": 3,
+        "mean_w": 298.469,
+        "peak_w": 346.85,
+        "p95_w": 328.88,
+        "net_w": 219.989,
+        "energy_j": 68281.479,
+        "wall_time_s": 228.773,
+        "mean_temp_c": 65.37,
+        "throttled": false,
+        "n_samples": 1914
+      },
+      {
+        "run": 4,
+        "mean_w": 301.454,
+        "peak_w": 350.54,
+        "p95_w": 336.649,
+        "net_w": 222.973,
+        "energy_j": 68951.189,
+        "wall_time_s": 228.729,
+        "mean_temp_c": 63.93,
+        "throttled": false,
+        "n_samples": 1912
+      },
+      {
+        "run": 5,
+        "mean_w": 297.243,
+        "peak_w": 346.33,
+        "p95_w": 334.23,
+        "net_w": 218.763,
+        "energy_j": 67393.077,
+        "wall_time_s": 226.727,
+        "mean_temp_c": 65.3,
+        "throttled": false,
+        "n_samples": 1895
+      }
+    ],
+    "energy_metrics": {
+      "gross_energy_per_image_mj": 11689.9787,
+      "net_energy_per_image_mj": 8629.632,
+      "gross_total_energy_j": 68503.275,
+      "gross_energy_per_image_j": 11.689979,
+      "idle_baseline_w": 78.48012711864408,
+      "mean_wall_time_s": 228.512
+    },
+    "cross_run_stats": {
+      "power_mean_w": 299.78,
+      "power_std_w": 1.838,
+      "power_min_w": 297.243,
+      "power_max_w": 301.454,
+      "peak_power_mean_w": 347.944,
+      "net_power_mean_w": 221.3,
+      "energy_mean_j": 68504.472,
+      "energy_std_j": 687.554,
+      "wall_time_mean_s": 228.512,
+      "wall_time_std_s": 1.019,
+      "valid_runs": 5,
+      "failed_runs": [],
+      "any_thermal_throttle": false
+    },
+    "publishable_summary": {
+      "mean_gpu_power_w": 299.78,
+      "std_gpu_power_w": 1.84,
+      "net_inference_power_w": 221.3,
+      "energy_per_image_mj_gross": 11689.979,
+      "std_energy_per_image_mj": 117.33,
+      "energy_per_image_mj_net": 8629.632,
+      "thermal_throttling": false,
+      "report_format": "mean +/- std across 5 valid runs"
+    }
+  }
+}
